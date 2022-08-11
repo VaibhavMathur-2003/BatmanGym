@@ -10,27 +10,44 @@ import ProductDisplay from "./components/Stripe/ProductDisplay";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SignUp from "./components/Auth/SignUp";
 import { useEffect, useState } from "react";
+import { firebase } from "./components/firebase/firebase";
 function App() {
-  const [isUserSignedIn, setIsUserSignedIn] = useState(true);
- 
+  const [isUserSignedIn, setIsUserSignedIn] = useState(false);
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      return setIsUserSignedIn(true);
+    }
+    setIsUserSignedIn(false);
+  });
+
   return (
     <div className="App">
       <BrowserRouter>
-         <Routes>
-         <Route exact path="/" element={isUserSignedIn && <SignUp />} /> 
+        <Routes>
           <Route
             exact
-            path="/homepage"
+            path="/"
             element={
-              isUserSignedIn && <>
-               <ResponsiveAppBar /> <Carousal /> <Equipments />
-                <Form />
-                <Subscription />
-                <Testimonial />
-                <Contact />
-              </>
+              !isUserSignedIn ? (
+                <SignUp />
+              ) : (
+                <>
+                  <ResponsiveAppBar /> <Carousal /> <Equipments />
+                  <Form />
+                  <Subscription />
+                  <Testimonial />
+                  <Contact />
+                </>
+              )
             }
           />
+          <Route exact path="/homepage" element={<>
+                  <ResponsiveAppBar /> <Carousal /> <Equipments />
+                  <Form />
+                  <Subscription />
+                  <Testimonial />
+                  <Contact />
+                </>}/>
           <Route
             exact
             path="/whySoSerious"

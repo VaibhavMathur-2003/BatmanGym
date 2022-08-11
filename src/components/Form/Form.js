@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { OutlinedInput, Button } from "@mui/material";
 
 const Form = () => {
+  
   const handleSave =()=>{
     localStorage.setItem("details", JSON.stringify(Details));
   }
@@ -14,7 +15,9 @@ const Form = () => {
   const [Gender, setGender] = useState();
   const [Disable, setDisable] = useState(false);
   const Details = [{ Name: Name, Email: Email, Age: Age, Gender: Gender }];
-  
+  useEffect(()=>{
+    localStorage.setItem("details", JSON.stringify(Details));
+  },[Details])
   useEffect(() => {
     const Info = JSON.parse(localStorage.getItem("details"));
     if (Info[0].Name) {

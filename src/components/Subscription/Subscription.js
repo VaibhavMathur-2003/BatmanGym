@@ -15,7 +15,13 @@ export default function MediaCard() {
         <div className="subscribeHead">Subscriptions</div>
         <div className="subscribe">
           <Link to="/whySoSerious">
-            <Card sx={{ maxWidth: 345 }}>
+            <Card
+              sx={{
+                maxWidth: 345,
+                boxShadow: `rgba(0, 0, 0, 0.8) 0px 40px 58px -16px,
+    rgba(0, 0, 0, 0.72) 0px 30px 22px -10px`,
+              }}
+            >
               <CardMedia
                 component="img"
                 height="140"
@@ -37,7 +43,8 @@ export default function MediaCard() {
             </Card>
           </Link>
           <Link to="/Batcycle">
-            <Card sx={{ maxWidth: 345 }}>
+            <Card sx={{ maxWidth: 345, boxShadow: `rgba(0, 0, 0, 0.8) 0px 40px 58px -16px,
+    rgba(0, 0, 0, 0.72) 0px 30px 22px -10px`,}}>
               <CardMedia
                 component="img"
                 height="140"
@@ -59,7 +66,8 @@ export default function MediaCard() {
             </Card>
           </Link>
           <Link to="/batMobile">
-            <Card sx={{ maxWidth: 345 }}>
+            <Card sx={{ maxWidth: 345 , boxShadow: `rgba(0, 0, 0, 0.8) 0px 40px 58px -16px,
+    rgba(0, 0, 0, 0.72) 0px 30px 22px -10px`}}>
               <CardMedia
                 component="img"
                 height="140"

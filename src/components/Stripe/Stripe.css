@@ -3,6 +3,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    margin-top: 50px;
   }
   .img{
     max-width: 500px;
@@ -14,6 +15,12 @@
   .head{
     color: white;
     text-align: center;
-    font-size: clamp(1.5rem , 1rem + 1vw , 2.5vw)
+    font-size: clamp(1.5rem , 1rem + 1vw , 2.5vw);
+  }
+  .head2{
+    color: white;
+    text-align: center;
+    font-size: clamp(1.5rem , 1rem + 1vw , 2.5vw);
+    margin: 0;
   }
   

@@ -12,11 +12,11 @@ const Testimonial = () => {
         style={{
           color: "white",
           textAlign: "center",
-          fontSize: "clamp(1.5rem, 0rem + 3.2vw, 2.5rem)",
+          fontSize: "clamp(1.5rem, 0rem + 3.5vw, 3.5rem)",
           marginBottom:"35px"
         }}
       >
-        Why Us!
+        ᴡʜʏ ᴜs!
       </div>
       <Carousel
         breakPoints={breakPoints}

@@ -24,7 +24,9 @@
 }
 .title h1{
     display: inline-block;
-    color: #0080ff;
+    color:  #39FF14;
+    font-weight: 200;
+    font-family: 'Times New Roman', Times, serif;
     margin: auto;
     font-size: clamp(1rem, 0rem + 2vw, 2rem);
 }

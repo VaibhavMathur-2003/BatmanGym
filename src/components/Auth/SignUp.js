@@ -1,9 +1,20 @@
 import React from "react";
 import { Button } from "@mui/material";
-import { SignInWithGoogle } from "../firebase/firebase";
 import { Link } from "react-router-dom";
-
+import { firebase } from "../firebase/firebase";
 const SignUp = () => {
+  const SignInWithFirebase = () => {
+    var google_provider = new firebase.auth.GoogleAuthProvider();
+    firebase
+      .auth()
+      .signInWithPopup(google_provider)
+      .then((re) => {
+        console.log(re);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <>
       <div
@@ -16,7 +27,7 @@ const SignUp = () => {
             padding: "50px",
           }}
           variant="contained"
-          onClick={SignInWithGoogle}
+          onClick={SignInWithFirebase}
         >
           Sign In With Google
         </Button>

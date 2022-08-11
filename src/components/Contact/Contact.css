@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 form {
   display: flex;
@@ -17,7 +16,6 @@ form h1 {
   font-weight: 800;
   margin-bottom: 20px;
   font-size: clamp(2rem, 0rem + 4.2vw, 2.5rem);
-
 }
 form input,
 form textarea {
@@ -25,10 +23,9 @@ form textarea {
   margin: 10px 0;
   padding: 20px;
   outline: none;
-  background: gray;
+  background: rgb(82, 81, 81);
   font-size: 16px;
   color: white;
-  
 }
 ::placeholder {
   color: white;
@@ -45,8 +42,6 @@ form button {
   margin: 20px auto;
   border-radius: 30px;
 }
-form button:hover{
+form button:hover {
   background-color: #0d2e4f;
 }
-
-
