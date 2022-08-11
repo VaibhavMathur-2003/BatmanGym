@@ -1,0 +1,19 @@
+
+  .section{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .img{
+    max-width: 500px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 40px 58px -16px,
+    rgba(0, 0, 0, 0.72) 0px 30px 22px -10px ;
+    border: 5px solid white;
+  }
+  .head{
+    color: white;
+    text-align: center;
+    font-size: clamp(1.5rem , 1rem + 1vw , 2.5vw)
+  }
+  
