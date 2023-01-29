@@ -34,15 +34,7 @@
 .cardPara{
   color: white;
 }
-/* @media only screen and (max-width: 1130px) {
-  .card {
-    width: 110%;
-  }
-  .cardImage img {
-    max-height: 20vw;
-  }
-  
-} */
+
 @media only screen and (max-width: 1022px) {
   .card {
     width: 90%;
